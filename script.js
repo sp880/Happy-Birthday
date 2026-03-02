@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const welcomeSparkles = document.getElementById('welcomeSparkles');
 
     const welcomeMessage = "On this beautiful day, I always wish — may your life be filled with laughter, good health, endless love, and every dream you've ever wished for 💖🌟";
-    
+
 
     const welcomeWords = welcomeMessage.split(' ');
     welcomeWords.forEach((word, i) => {
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. "FOREVER YOURS" — site sparkles → popup with word-by-word
     // ═══════════════════════════════════════════════════
     const popupMessageEl = document.getElementById('popupMessage');
-    const foreverMessage = "I love you more than words can say 💖, my heart is yours always. Happy Birthday, Baby. 🎂❤️😘";
+    const foreverMessage = "“It happened quietly — loving you — and now it’s the strongest thing I feel✨. I wouldn’t undo it for anything.” ❤️❤️";
 
     yesBtn.addEventListener('click', () => {
         resetNoButton(); // hide floating No button before popup
@@ -268,3 +268,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 200);
     }
 });
+
+(function () {
+    const container = document.getElementById('eqSparkles');
+    if (!container) return;
+    const symbols = [];
+    const positions = [
+        { left: '5%', top: '10%', delay: '0s' },
+        { left: '90%', top: '15%', delay: '0.4s' },
+        { left: '15%', top: '75%', delay: '0.8s' },
+        { left: '80%', top: '70%', delay: '1.2s' },
+        { left: '50%', top: '5%', delay: '0.6s' },
+        { left: '50%', top: '85%', delay: '1s' },
+        { left: '30%', top: '40%', delay: '1.5s' },
+        { left: '70%', top: '45%', delay: '0.2s' },
+    ];
+    positions.forEach((pos, i) => {
+        const sp = document.createElement('span');
+        sp.className = 'eq-sparkle';
+        sp.textContent = symbols[i % symbols.length];
+        sp.style.left = pos.left;
+        sp.style.top = pos.top;
+        sp.style.animationDelay = pos.delay;
+        container.appendChild(sp);
+    });
+})();

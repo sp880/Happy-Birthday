@@ -693,4 +693,44 @@ body {
     .kiss-stage {
         height: 100px;
     }
+     .eye-quote-card {
+        background: linear-gradient(135deg, #fff0f3 0%, #ffe4ec 50%, #ffd6e0 100%);
+        border-radius: 24px;
+        padding: 2.2rem 1.8rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(255, 77, 109, 0.18);
+        border: 1.5px solid rgba(255, 180, 200, 0.5);
+    }
+    .eye-quote-sparkles {
+        position: absolute; inset: 0;
+        pointer-events: none; overflow: hidden;
+    }
+    .eq-sparkle {
+        position: absolute; font-size: 1.1rem;
+        animation: eqSparkleFloat 3s ease-in-out infinite; opacity: 0.7;
+    }
+    @keyframes eqSparkleFloat {
+        0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.5; }
+        50% { transform: translateY(-12px) rotate(20deg) scale(1.2); opacity: 1; }
+    }
+    .eye-quote-text {
+        font-family: 'Dancing Script', cursive;
+        font-size: clamp(1.25rem, 4vw, 1.7rem);
+        color: #c9184a; line-height: 1.8;
+        position: relative; z-index: 1;
+        text-shadow: 0 1px 6px rgba(255, 77, 109, 0.12);
+    }
+    .eye-quote-emojis {
+        font-size: clamp(1.4rem, 4vw, 1.8rem);
+        margin-top: 0.8rem; display: block;
+        letter-spacing: 0.2em;
+        animation: emojiPulse 2s ease-in-out infinite;
+        position: relative; z-index: 1;
+    }
+    @keyframes emojiPulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.12); }
+    }
 }
