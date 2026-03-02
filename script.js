@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. "FOREVER YOURS" — site sparkles → popup with word-by-word
     // ═══════════════════════════════════════════════════
     const popupMessageEl = document.getElementById('popupMessage');
-    const foreverMessage = "“It happened quietly — loving you — and now it’s the strongest thing I feel✨. I wouldn’t undo it for anything.” ❤️❤️";
+    const foreverMessage = "“It happened quietly — loving you — and now it’s the strongest thing I feel✨. I wouldn’t undo it for anything.” I LOVE YOU 😘❤️";
 
     yesBtn.addEventListener('click', () => {
         resetNoButton(); // hide floating No button before popup
